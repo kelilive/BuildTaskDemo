@@ -19,7 +19,7 @@
 	<ItemGroup>
 		<Reference Include="Microsoft.Build.Framework" />
 		<Reference Include="RevitAPI">
-			<HintPath>..\..\Libs\Revit.API\2019.0\RevitAPI.dll</HintPath>
+			<HintPath>..\..\Libs\Revit.API\$(RevitVersion)\RevitAPI.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
 		<Reference Include="RevitAPIUI">
