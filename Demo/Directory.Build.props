@@ -1,0 +1,58 @@
+<Project>
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <PlatformTarget>x64</PlatformTarget>
+		<TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>true</ImplicitUsings>
+    </PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R16.0'))">
+		<RevitVersion>2016.0</RevitVersion>
+		<TargetFramework>net45</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R17.0'))">
+		<RevitVersion>2017.0</RevitVersion>
+		<TargetFramework>net452</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R18.0'))">
+		<RevitVersion>2018.0</RevitVersion>
+		<TargetFramework>net452</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R18_2'))">
+		<RevitVersion>2018.2</RevitVersion>
+		<TargetFramework>net452</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R19.0'))">
+		<RevitVersion>2019.0</RevitVersion>
+		<TargetFramework>net47</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R20.0'))">
+		<RevitVersion>2020.0</RevitVersion>
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R21.0'))">
+        <RevitVersion>2021.0</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R22.0'))">
+        <RevitVersion>2022.0</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R23.0'))">
+        <RevitVersion>2023.0</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R24.0'))">
+        <RevitVersion>2024.0</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R25.0'))">
+        <RevitVersion>2025.0</RevitVersion>
+        <TargetFramework>net8.0-windows</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('R26.0'))">
+        <RevitVersion>2026.0</RevitVersion>
+        <TargetFramework>net8.0-windows</TargetFramework>
+    </PropertyGroup>
+</Project>

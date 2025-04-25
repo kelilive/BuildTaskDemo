@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="GenerateRevitCompatibleDefineConstants"
+        AfterTargets="AddImplicitDefineConstants"
+        Condition="$(DisableImplicitRevitDefines) != 'true' ">
+
+		<GenerateCompatibleDefineConstants RevitVersion="$(RevitVersion)"
+            Configuration="$(Configuration)"
+            Configurations="$(Configurations)">
+			<Output TaskParameter="DefineConstants" ItemName="_ImplicitRevitDefineConstant" />
+		</GenerateCompatibleDefineConstants>
+
+		<PropertyGroup>
+			<DefineConstants Condition=" '@(_ImplicitRevitDefineConstant)' != '' ">
+				$(DefineConstants);@(_ImplicitRevitDefineConstant)
+			</DefineConstants>
+		</PropertyGroup>
+	</Target>
+
+</Project>
